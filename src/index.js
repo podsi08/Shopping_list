@@ -3,12 +3,16 @@ import { render } from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import App from './components/App';
+//in file reducers/index.js I made export default so now I can give combineReducers other name (rootReducer)
 import rootReducer from './reducers';
 
 
-//store przetrzymuje stan aplikacji (jest tylko jeden), możemy się do niego dostać przez getState()
-//pozwala zmieniać state poprzez dispatch(action)
-//dodaje słuchaczy poprzez subscribe(listener)
+//store:
+//holds application state;
+//allows access to state via getState();
+//allows state to be update via dispatch(action);
+//register listeners via subscribe(listener);
+//there is only a single store;
 
 const store = createStore(rootReducer);
 

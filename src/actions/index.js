@@ -1,7 +1,7 @@
-//actions to paczki informacji wysyłane z aplikacji do store.
-// Są jedynym źródłem informacji dla store.
-// Wysyłane są przy pomocy store.dispatch().
-// Muszą mieć określony typ
+//actions are payloads of information that send data from application to store
+//actions are the only source of informations for store
+//they're send using store.dispatch().
+//actions must have a type property
 
 // {
 //     type: ADD_ITEM,
@@ -18,9 +18,9 @@
 //     filter: SHOW_BOUGHT
 // }
 
-//action creator -> functions that create actions
+//action creator - functions that create actions
 
-//typy akcji definiujemy jako stringi
+//type of actions we defined as a strings
 export const ADD_ITEM = 'ADD_ITEM';
 export const TOGGLE_ITEM = 'TOGGLE_ITEM';
 export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
@@ -28,6 +28,7 @@ export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
 let nextItemId = 0;
 
 export const addItem = (product) => {
+    //each time we add a new product, the nextItemId is increment
     return {
         type: ADD_ITEM,
         id: nextItemId++,
@@ -54,4 +55,4 @@ export const setVisibilityFilter = (filter) => {
         type: SET_VISIBILITY_FILTER,
         filter
     }
-}
+};

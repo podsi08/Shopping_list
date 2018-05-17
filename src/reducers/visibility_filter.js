@@ -1,5 +1,7 @@
-import { VisibilityFilters } from "../actions/action_creators";
+import { VisibilityFilters } from "../actions/index";
 
+
+//by default all items are visible
 const visibilityFilter = (state = VisibilityFilters.SHOW_ALL, action) => {
     switch (action.type) {
         case 'SET_VISIBILITY_FILTER':
