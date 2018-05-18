@@ -8,6 +8,7 @@ class AddItem extends React.Component {
         return(
             <div>
                 <form
+                    className='row'
                     onSubmit={e => {
                         e.preventDefault();
                         if(!input.value.trim()){
@@ -21,10 +22,13 @@ class AddItem extends React.Component {
                         ref={node => {
                             input = node
                         }}
+                        className='col-sm-6 form-control'
                     />
-                    <button type="submit">
+                    <div className='col-sm-1'/>
+                    <button type="submit" className='col-sm-2 btn btn-warning'>
                         Add Item
                     </button>
+                    <div className='col-sm-3'/>
                 </form>
             </div>
         )

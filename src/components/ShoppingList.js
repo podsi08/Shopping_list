@@ -6,13 +6,17 @@ import Product from './Product';
 class ShoppingList extends React.Component {
     render(){
         return (
-            <ul>
-                {
-                    this.props.items.map((item) => (
-                        <Product key={item.id} bought={item.bought} product={item.product} onClick={() => {this.props.toggleItem(item.id)}}/>
-                    ))
-                }
-            </ul>
+            <div className='row'>
+                <ul className='col-sm-6'>
+                    {
+                        this.props.items.map((item) => (
+                            <Product key={item.id} bought={item.bought} product={item.product} onClick={() => {this.props.toggleItem(item.id)}}/>
+                        ))
+                    }
+                </ul>
+                <div className='col-sm-6'/>
+            </div>
+
         )
     }
 }

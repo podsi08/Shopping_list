@@ -6,7 +6,9 @@ class Product extends React.Component {
         return (
             <li
                 onClick={this.props.onClick}
-                style={{textDecoration: this.props.bought ? 'line-through' : 'none'}}
+                className={this.props.bought ?
+                           'row list-group-item list-group-item-dark' :
+                           'row list-group-item list-group-item-warning'}
             >
                 {this.props.product}
             </li>

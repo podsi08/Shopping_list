@@ -6,7 +6,7 @@ import { VisibilityFilters } from "../actions/index";
 class Footer extends React.Component {
     render(){
         return(
-            <div>
+            <div className='footer'>
                 <span>Show: </span>
                 <FilterLink filter={VisibilityFilters.SHOW_ALL}>
                     All

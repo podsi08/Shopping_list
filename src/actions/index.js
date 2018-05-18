@@ -18,12 +18,20 @@
 //     filter: SHOW_BOUGHT
 // }
 
+
 //action creator - functions that create actions
 
 //type of actions we defined as a strings
 export const ADD_ITEM = 'ADD_ITEM';
 export const TOGGLE_ITEM = 'TOGGLE_ITEM';
 export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
+
+
+export const VisibilityFilters = {
+    SHOW_ALL: 'SHOW_ALL',
+    SHOW_BOUGHT: 'SHOW_BOUGHT',
+    SHOW_TO_BUY: 'SHOW_TO_BUY'
+};
 
 let nextItemId = 0;
 
@@ -41,13 +49,6 @@ export const toggleItem = (id) => {
         type: TOGGLE_ITEM,
         id
     }
-};
-
-
-export const VisibilityFilters = {
-    SHOW_ALL: 'SHOW_ALL',
-    SHOW_BOUGHT: 'SHOW_BOUGHT',
-    SHOW_TO_BUY: 'SHOW_TO_BUY'
 };
 
 export const setVisibilityFilter = (filter) => {

@@ -2,14 +2,16 @@ import React from 'react';
 import Footer from './Footer';
 import AddItem from '../containers/AddItem';
 import VisibleShoppingList from '../containers/VisibleShoppingList';
-import '../scss/main.scss';
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import '../scss/main.css';
 
 
 class App extends React.Component {
     render(){
         return (
-            <div>
-                <AddItem/>
+            <div className='container'>
+                <h3>Shopping List</h3>
+                <AddItem className='row'/>
                 <VisibleShoppingList/>
                 <Footer/>
             </div>
