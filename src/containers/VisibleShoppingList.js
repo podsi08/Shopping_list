@@ -7,14 +7,18 @@ import ShoppingList from "../components/ShoppingList";
 // you are wrapping.
 
 const getVisibleShoppingList = (items, filter) => {
+    let bought = items.filter(i => i.bought);
+    let toBuy = items.filter(i => !i.bought);
+
     switch (filter) {
         case 'SHOW_BOUGHT':
-            return items.filter(i => i.bought);
+            return bought;
         case 'SHOW_TO_BUY':
-            return items.filter(i => !i.bought);
+            return toBuy;
         case 'SHOW_ALL':
         default:
-            return items
+            //by default I return products to buy at top of the list
+            return toBuy.concat(bought);
     }
 };
 
