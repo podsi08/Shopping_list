@@ -1,37 +1,39 @@
-#root {
-  min-width: 300px; }
-  #root .container h3 {
-    margin-top: 10px; }
-  #root .container form {
-    margin-top: 20px; }
-    #root .container form .form-control {
+body {
+  background-image: url("../images/extra_clean_paper.png"); }
+  body #root {
+    min-width: 300px; }
+    body #root .container h3 {
+      margin-top: 10px; }
+    body #root .container form {
+      margin-top: 20px; }
+      body #root .container form .form-control {
+        width: 90%;
+        margin-left: 15px; }
+      body #root .container form button {
+        max-width: 200px;
+        margin: 15px;
+        font-size: 18px; }
+    body #root .container ul {
       width: 90%;
       margin-left: 15px; }
-    #root .container form button {
-      max-width: 200px;
-      margin: 15px;
+      body #root .container ul li {
+        padding-top: 6px;
+        padding-bottom: 6px; }
+      body #root .container ul .list-group-item-dark {
+        text-decoration: line-through; }
+    body #root .container .footer {
       font-size: 18px; }
-  #root .container ul {
-    width: 90%;
-    margin-left: 15px; }
-    #root .container ul li {
-      padding-top: 6px;
-      padding-bottom: 6px; }
-    #root .container ul .list-group-item-dark {
-      text-decoration: line-through; }
-  #root .container .footer {
-    font-size: 18px; }
-    #root .container .footer a, #root .container .footer span {
-      margin-right: 20px; }
-      #root .container .footer a:first-child, #root .container .footer span:first-child {
-        margin-right: 5px; }
+      body #root .container .footer a, body #root .container .footer span {
+        margin-right: 20px; }
+        body #root .container .footer a:first-child, body #root .container .footer span:first-child {
+          margin-right: 5px; }
 
 @media only screen and (min-width: 576px) {
-  #root .container form button {
+  body #root .container form button {
     max-width: 100%;
     margin: 0;
     font-size: 18px; }
-  #root .container ul {
+  body #root .container ul {
     margin-top: 20px; }
-  #root .container .footer {
+  body #root .container .footer {
     font-size: 18px; } }

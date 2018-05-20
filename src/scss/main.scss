@@ -1,62 +1,69 @@
-#root {
-	min-width: 300px;
-	.container {
-		h3 {
-			margin-top: 10px;
-		}
-		form {
-			margin-top: 20px;
-			.form-control {
-				width: 90%;
-				margin-left: 15px;
-			}
-			button {
-				max-width: 200px;
-				margin: 15px;
-				font-size: 18px;
-			}
-		}
-		ul {
-			width: 90%;
-			margin-left: 15px;
-			li {
-				padding-top: 6px;
-				padding-bottom: 6px;
-			}
-			.list-group-item-dark {
-				text-decoration: line-through;
-			}
-		}
-		.footer {
-			font-size: 18px;
-			a, span {
-				margin-right: 20px;
-				&:first-child {
-					margin-right: 5px;
-				}
-			}
-		}
-
-	}
-}
-
-
-@media only screen and (min-width: 576px) {
+body {
+	background-image: url("../images/extra_clean_paper.png");
 	#root {
+		min-width: 300px;
 		.container {
+			h3 {
+				margin-top: 10px;
+			}
 			form {
+				margin-top: 20px;
+				.form-control {
+					width: 90%;
+					margin-left: 15px;
+				}
 				button {
-					max-width: 100%;
-					margin: 0;
+					max-width: 200px;
+					margin: 15px;
 					font-size: 18px;
 				}
 			}
 			ul {
-				margin-top: 20px;
+				width: 90%;
+				margin-left: 15px;
+				li {
+					padding-top: 6px;
+					padding-bottom: 6px;
+				}
+				.list-group-item-dark {
+					text-decoration: line-through;
+				}
 			}
 			.footer {
 				font-size: 18px;
+				a, span {
+					margin-right: 20px;
+					&:first-child {
+						margin-right: 5px;
+					}
+				}
+			}
+
+		}
+	}
+}
+
+
+
+@media only screen and (min-width: 576px) {
+	body {
+		#root {
+			.container {
+				form {
+					button {
+						max-width: 100%;
+						margin: 0;
+						font-size: 18px;
+					}
+				}
+				ul {
+					margin-top: 20px;
+				}
+				.footer {
+					font-size: 18px;
+				}
 			}
 		}
 	}
+
 }

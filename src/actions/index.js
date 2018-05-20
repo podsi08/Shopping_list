@@ -33,13 +33,10 @@ export const VisibilityFilters = {
     SHOW_TO_BUY: 'SHOW_TO_BUY'
 };
 
-let nextItemId = 0;
-
 export const addItem = (product) => {
     //each time we add a new product, the nextItemId is increment
     return {
         type: ADD_ITEM,
-        id: nextItemId++,
         product
     }
 };
