@@ -1,77 +1,52 @@
 import React from 'react';
 import { reduxForm, Field } from 'redux-form';
-import { connect } from 'react-redux';
 import { addItem } from "../actions/index";
 
 
 class AddItem extends React.Component {
+    //when new product is added (amount and unit aren't required) we passed it to store (function addItem defined in actions/index.js
+    // with parameters action.product, action.amount and action.unit. In reducer shopping_list.js in case ADD_ITEM we also add id and bought property )
     mySubmit = values => {
-        console.log(values);
-
-        if(!values.product.trim()) {
+        if(values.product === undefined || !values.product.trim()) {
             return
         }
         this.props.dispatch(addItem(values.product, values.amount, values.unit));
-    }
+        //clearing of the form
+        values.product = '';
+        values.amount = '';
+        values.unit = '';
+    };
+
+    //I create a form using redux-form
+    //Fields are used instead of inputs. They must have name property, component (for example input, select)
+    //onSubmit we have to pass this.props.handleSubmit and as a callback we define what to do with form values. We can pass
+    //values as a parameter of this callback.
     render(){
-
-
         return(
-            <form onSubmit={this.props.handleSubmit(this.mySubmit)}>
+            <form onSubmit={this.props.handleSubmit(this.mySubmit)}
+                  className='row'>
                 <Field name='product'
                        component='input'
                        type='text'
-                       placeholder='product'/>
+                       placeholder='product'
+                       className='col-sm-3 form-control'/>
                 <Field name='amount'
                        component='input'
                        type='number'
-                       placeholder='amount'/>
+                       placeholder='amount'
+                       className='col-sm-2 form-control'/>
                 <Field name='unit'
-                       component='select'>
+                       component='select'
+                       className='col-sm-2 form-control'>
                     <option></option>
-                    <option>pcs.</option>
                     <option>kg</option>
                     <option>g</option>
                     <option>l</option>
                 </Field>
-                <button type="submit">Add Item</button>
+                <div className='col-sm-1'/>
+                <button type="submit" className='col-sm-2 btn btn-warning'>Add Item</button>
+                <div className='col-sm-2'/>
             </form>
-
-            // <div>
-            //     <form
-            //         className='row'
-            //         onSubmit={e => {
-            //             e.preventDefault();
-            //             if(!input.value.trim()){
-            //                 return
-            //             }
-            //             this.props.dispatch(addItem(input.value));
-            //             input.value = ''
-            //         }}
-            //     >
-            //         <input
-            //             ref={node => {
-            //                 input = node
-            //             }}
-            //             className='col-sm-6 form-control'
-            //             placeholder='product'
-            //         />
-            //         <input
-            //             placeholder='amount'/>
-            //         <select className='form-control'>
-            //             <option>unit</option>
-            //             <option>pcs.</option>
-            //             <option>kg</option>
-            //             <option>g</option>
-            //             <option>l</option>
-            //         </select>
-            //         <div className='col-sm-1'/>
-            //         <button type="submit" className='col-sm-2 btn btn-warning'>
-            //             Add Item
-            //         </button>
-            //         <div className='col-sm-3'/>
-            //     </form>
-            // </div>
         )
     }
 }
@@ -80,6 +55,5 @@ AddItem = reduxForm({
     form: 'addItem'
 })(AddItem);
 
-// AddItem = connect()(AddItem);
 
 export default AddItem;

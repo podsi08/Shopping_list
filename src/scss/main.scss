@@ -3,27 +3,40 @@ body {
 	#root {
 		min-width: 300px;
 		.container {
+			margin-left: 15px;
 			h3 {
 				margin-top: 10px;
 			}
 			form {
 				margin-top: 20px;
-				.form-control {
+				input[type='text']{
 					width: 90%;
+					margin-bottom: 10px;
+				}
+				input[type='number']{
+					width: 30%;
+					display: inline-block;
+				}
+				select {
+					width: 20%;
+					display: inline-block;
 					margin-left: 15px;
 				}
 				button {
-					max-width: 200px;
-					margin: 15px;
+					max-width: 150px;
 					font-size: 18px;
+					margin-top: 15px;
 				}
 			}
 			ul {
 				width: 90%;
-				margin-left: 15px;
+				margin-top: 15px;
 				li {
 					padding-top: 6px;
 					padding-bottom: 6px;
+					span {
+						float: right;
+					}
 				}
 				.list-group-item-dark {
 					text-decoration: line-through;
@@ -49,9 +62,21 @@ body {
 	body {
 		#root {
 			.container {
+				margin: auto;
 				form {
+					&>*{
+						width: 100%;
+					}
+					input[type='text']{
+						margin-bottom: 0;
+					}
+					input[type='number']{
+						margin-left: 15px;
+					}
+					select {
+						margin-left: 15px;
+					}
 					button {
-						max-width: 100%;
 						margin: 0;
 						font-size: 18px;
 					}

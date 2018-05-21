@@ -10,7 +10,7 @@ class Product extends React.Component {
                            'row list-group-item list-group-item-dark' :
                            'row list-group-item list-group-item-warning'}
             >
-                {this.props.product}{this.props.amount}{this.props.unit}
+                {this.props.product}<span>{this.props.amount} {this.props.unit}</span>
             </li>
         )
     }

@@ -2,38 +2,58 @@ body {
   background-image: url("../images/extra_clean_paper.png"); }
   body #root {
     min-width: 300px; }
-    body #root .container h3 {
-      margin-top: 10px; }
-    body #root .container form {
-      margin-top: 20px; }
-      body #root .container form .form-control {
-        width: 90%;
-        margin-left: 15px; }
-      body #root .container form button {
-        max-width: 200px;
-        margin: 15px;
-        font-size: 18px; }
-    body #root .container ul {
-      width: 90%;
+    body #root .container {
       margin-left: 15px; }
-      body #root .container ul li {
-        padding-top: 6px;
-        padding-bottom: 6px; }
-      body #root .container ul .list-group-item-dark {
-        text-decoration: line-through; }
-    body #root .container .footer {
-      font-size: 18px; }
-      body #root .container .footer a, body #root .container .footer span {
-        margin-right: 20px; }
-        body #root .container .footer a:first-child, body #root .container .footer span:first-child {
-          margin-right: 5px; }
+      body #root .container h3 {
+        margin-top: 10px; }
+      body #root .container form {
+        margin-top: 20px; }
+        body #root .container form input[type='text'] {
+          width: 90%;
+          margin-bottom: 10px; }
+        body #root .container form input[type='number'] {
+          width: 30%;
+          display: inline-block; }
+        body #root .container form select {
+          width: 20%;
+          display: inline-block;
+          margin-left: 15px; }
+        body #root .container form button {
+          max-width: 150px;
+          font-size: 18px;
+          margin-top: 15px; }
+      body #root .container ul {
+        width: 90%;
+        margin-top: 15px; }
+        body #root .container ul li {
+          padding-top: 6px;
+          padding-bottom: 6px; }
+          body #root .container ul li span {
+            float: right; }
+        body #root .container ul .list-group-item-dark {
+          text-decoration: line-through; }
+      body #root .container .footer {
+        font-size: 18px; }
+        body #root .container .footer a, body #root .container .footer span {
+          margin-right: 20px; }
+          body #root .container .footer a:first-child, body #root .container .footer span:first-child {
+            margin-right: 5px; }
 
 @media only screen and (min-width: 576px) {
-  body #root .container form button {
-    max-width: 100%;
-    margin: 0;
-    font-size: 18px; }
-  body #root .container ul {
-    margin-top: 20px; }
-  body #root .container .footer {
-    font-size: 18px; } }
+  body #root .container {
+    margin: auto; }
+    body #root .container form > * {
+      width: 100%; }
+    body #root .container form input[type='text'] {
+      margin-bottom: 0; }
+    body #root .container form input[type='number'] {
+      margin-left: 15px; }
+    body #root .container form select {
+      margin-left: 15px; }
+    body #root .container form button {
+      margin: 0;
+      font-size: 18px; }
+    body #root .container ul {
+      margin-top: 20px; }
+    body #root .container .footer {
+      font-size: 18px; } }

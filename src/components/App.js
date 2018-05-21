@@ -13,7 +13,7 @@ class App extends React.Component {
     render(){
         return (
             <div className='container'>
-                <h3>Shopping List</h3>
+                <h3 className='row'>Shopping List</h3>
                 <AddItem className='row'/>
                 <VisibleShoppingList/>
                 <Footer/>
