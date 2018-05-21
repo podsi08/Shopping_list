@@ -27,7 +27,9 @@ const shoppingList = (state = loadDataFromLocalStorage(), action) => {
             let newProduct = {
                 id: lastId + 1,
                 product: action.product,
-                bought: false
+                bought: false,
+                amount: action.amount,
+                unit: action.unit
             };
 
             //I add a new product at the end of the shopping list from local storage

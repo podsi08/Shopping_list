@@ -10,7 +10,12 @@ class ShoppingList extends React.Component {
                 <ul className='col-sm-6'>
                     {
                         this.props.items.map((item) => (
-                            <Product key={item.id} bought={item.bought} product={item.product} onClick={() => {this.props.toggleItem(item.id)}}/>
+                            <Product key={item.id}
+                                     bought={item.bought}
+                                     product={item.product}
+                                     amount={item.amount}
+                                     unit={item.unit}
+                                     onClick={() => {this.props.toggleItem(item.id)}}/>
                         ))
                     }
                 </ul>

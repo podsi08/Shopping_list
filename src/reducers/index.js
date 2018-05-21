@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import { reducer as formReducer } from 'redux-form';
 import shoppingList from './shopping_list';
 import visibilityFilter from './visibility_filter';
 
@@ -9,7 +10,8 @@ export default combineReducers ({
     //usually key and value are the same, then for example we can write just (visibilityFilter)
     //we can get data from store in other components using state.items and state.currentVisibilityFilter
     items: shoppingList,
-    currentVisibilityFilter: visibilityFilter
+    currentVisibilityFilter: visibilityFilter,
+    form: formReducer
 })
 
 
