@@ -8,20 +8,28 @@ body {
         margin-top: 10px; }
       body #root .container form {
         margin-top: 20px; }
-        body #root .container form input[type='text'] {
-          width: 90%;
-          margin-bottom: 10px; }
-        body #root .container form input[type='number'] {
-          width: 30%;
+        body #root .container form > * {
+          padding-left: 0;
+          margin-top: 5px; }
+        body #root .container form div:nth-child(2) {
+          width: 40%;
+          max-width: 130px;
           display: inline-block; }
+        body #root .container form input {
+          margin-bottom: 5px; }
+        body #root .container form input[type='text'] {
+          width: 90%; }
         body #root .container form select {
           width: 20%;
           display: inline-block;
-          margin-left: 15px; }
+          max-width: 130px; }
         body #root .container form button {
           max-width: 150px;
           font-size: 18px;
           margin-top: 15px; }
+        body #root .container form .error {
+          color: #db1018;
+          padding-left: 10px; }
       body #root .container ul {
         width: 90%;
         margin-top: 15px; }
@@ -33,26 +41,24 @@ body {
         body #root .container ul .list-group-item-dark {
           text-decoration: line-through; }
       body #root .container .footer {
-        font-size: 18px; }
+        font-size: 18px;
+        margin-bottom: 20px; }
         body #root .container .footer a, body #root .container .footer span {
           margin-right: 20px; }
-          body #root .container .footer a:first-child, body #root .container .footer span:first-child {
-            margin-right: 5px; }
 
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 768px) {
   body #root .container {
     margin: auto; }
     body #root .container form > * {
-      width: 100%; }
+      width: 100%;
+      margin-top: 0; }
     body #root .container form input[type='text'] {
-      margin-bottom: 0; }
-    body #root .container form input[type='number'] {
-      margin-left: 15px; }
-    body #root .container form select {
-      margin-left: 15px; }
+      width: 100%; }
     body #root .container form button {
       margin: 0;
-      font-size: 18px; }
+      font-size: 18px;
+      width: 130px;
+      height: 38px; }
     body #root .container ul {
       margin-top: 20px; }
     body #root .container .footer {

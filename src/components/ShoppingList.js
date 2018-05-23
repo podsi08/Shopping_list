@@ -7,7 +7,7 @@ class ShoppingList extends React.Component {
     render(){
         return (
             <div className='row'>
-                <ul className='col-sm-6'>
+                <ul className='col-md-7'>
                     {
                         this.props.items.map((item) => (
                             <Product key={item.id}
@@ -19,7 +19,7 @@ class ShoppingList extends React.Component {
                         ))
                     }
                 </ul>
-                <div className='col-sm-6'/>
+                <div className='col-md-5'/>
             </div>
 
         )
