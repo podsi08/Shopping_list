@@ -25,13 +25,16 @@
 export const ADD_ITEM = 'ADD_ITEM';
 export const TOGGLE_ITEM = 'TOGGLE_ITEM';
 export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
-
+export const DELETE_BOUGHT = 'DELETE_BOUGHT';
+export const DELETE_ALL = 'DELETE_ALL';
 
 export const VisibilityFilters = {
     SHOW_ALL: 'SHOW_ALL',
     SHOW_BOUGHT: 'SHOW_BOUGHT',
     SHOW_TO_BUY: 'SHOW_TO_BUY'
 };
+
+
 
 export const addItem = (product, amount, unit) => {
     return {
@@ -53,5 +56,17 @@ export const setVisibilityFilter = (filter) => {
     return {
         type: SET_VISIBILITY_FILTER,
         filter
+    }
+};
+
+export const deleteBought = () => {
+    return {
+        type: DELETE_BOUGHT
+    }
+};
+
+export const deleteAll = () => {
+    return {
+        type: DELETE_ALL
     }
 };

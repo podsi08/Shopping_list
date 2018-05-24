@@ -43,15 +43,28 @@ const shoppingList = (state = loadDataFromLocalStorage(), action) => {
 
         case 'TOGGLE_ITEM':
             //if action id is the same as an item id, bought boolean will change
-            const newSate = storageShoppingList.map(item =>
+            const newState = storageShoppingList.map(item =>
                 (item.id === action.id) ? {...item, bought: !item.bought} : item
             );
 
             //I save new list with bought product property changed to local storage
-            saveToLocalStorage(newSate);
+            saveToLocalStorage(newState);
 
             //I return newState
-            return [...newSate];
+            return newState;
+
+        case 'DELETE_BOUGHT':
+            const toBuy = storageShoppingList.filter(item => item.bought);
+            console.log('działa')
+            saveToLocalStorage(toBuy);
+
+            return toBuy;
+
+        case 'DELETE_ALL':
+            localStorage.removeItem('shopping_list');
+            console.log('działaaa')
+            return [];
+
         default:
             return state;
     }
