@@ -1,22 +1,19 @@
 import { connect } from 'react-redux';
-import { deleteAll, deleteBought } from "../actions/index";
+import { deleteItems } from "../actions/index";
+
 import DeleteBtn from '../components/DeleteBtn';
 
 
-const mapDispatchToProps = dispatch => {
-    return {
-        deleteBought: () => {
-            dispatch(deleteBought())
-        },
-        deleteAll: () => {
-            dispatch(deleteAll())
-        }
-    }
+const mapDispatchToProps = (dispatch, ownProps) => {
+     return {
+         onClick: () => dispatch(deleteItems(ownProps.toDelete))
+     };
 };
 
 
 const DeleteActionBtn = connect(
-    // mapStateToProps,
+    //I don't need to pass state to DeleteBtn props in mapStateToProps (I have to put null or undefined)
+    null,
     mapDispatchToProps
 )(DeleteBtn);
 

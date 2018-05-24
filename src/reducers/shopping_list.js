@@ -53,17 +53,24 @@ const shoppingList = (state = loadDataFromLocalStorage(), action) => {
             //I return newState
             return newState;
 
-        case 'DELETE_BOUGHT':
-            const toBuy = storageShoppingList.filter(item => item.bought);
-            console.log('działa')
-            saveToLocalStorage(toBuy);
+        case 'DELETE_ITEM':
+            //there are two cases of DELETE_ITEM. Function deleteItems from action/index.js take as parameter
+            //toDelete (the props of DeleteActionBtn)
 
-            return toBuy;
+            if (action.toDelete === 'DELETE_BOUGHT'){
+                const toBuy = storageShoppingList.filter(item => !item.bought);
 
-        case 'DELETE_ALL':
-            localStorage.removeItem('shopping_list');
-            console.log('działaaa')
-            return [];
+                saveToLocalStorage(toBuy);
+
+                return toBuy;
+            }
+            if (action.toDelete === 'DELETE_ALL'){
+
+                localStorage.removeItem('shopping_list');
+
+                return []
+            }
+            break;
 
         default:
             return state;

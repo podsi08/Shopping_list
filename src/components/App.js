@@ -9,7 +9,8 @@ import '../scss/main.css';
 class App extends React.Component {
     submit = values => {
         console.log(values);
-    }
+    };
+
     render(){
         return (
             <div className='container'>

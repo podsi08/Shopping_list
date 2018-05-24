@@ -6,6 +6,12 @@ body {
       margin-left: 15px; }
       body #root .container h3 {
         margin-top: 10px; }
+      body #root .container button {
+        max-width: 150px;
+        display: inline-block;
+        margin-right: 50px;
+        font-size: 18px;
+        margin-bottom: 10px; }
       body #root .container form {
         margin-top: 20px; }
         body #root .container form > * {
@@ -23,10 +29,6 @@ body {
           width: 20%;
           display: inline-block;
           max-width: 130px; }
-        body #root .container form button {
-          max-width: 150px;
-          font-size: 18px;
-          margin-top: 15px; }
         body #root .container form .error {
           color: #db1018;
           padding-left: 10px; }
@@ -55,9 +57,7 @@ body {
     body #root .container form input[type='text'] {
       width: 100%; }
     body #root .container form button {
-      margin: 0;
-      font-size: 18px;
-      width: 130px;
+      max-width: 125px;
       height: 38px; }
     body #root .container ul {
       margin-top: 20px; }

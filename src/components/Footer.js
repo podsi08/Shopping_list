@@ -2,6 +2,7 @@ import React from 'react';
 import FilterLink from '../containers/FilterLink';
 import { VisibilityFilters } from "../actions/index";
 import DeleteActionBtn from "../containers/DeleteActionBtn";
+import {DeleteOptions} from "../actions";
 
 
 class Footer extends React.Component {
@@ -20,9 +21,14 @@ class Footer extends React.Component {
                         Bought
                     </FilterLink>
                 </div>
-                <div className='row'>
-                    <DeleteActionBtn onClick={() => {this.props.deleteBought()}} name='Remove bought'/>
-                    <DeleteActionBtn onClick={() => {this.props.deleteAll()}} name='Remove all'/>
+                <div className='footer row'>
+                    {/*ownProps toDelete are used in DeleteActionBtn*/}
+                    <DeleteActionBtn toDelete={DeleteOptions.DELETE_BOUGHT}
+                                     onClick={() => this.props.onClick()}
+                                     name='Remove bought'/>
+                    <DeleteActionBtn toDelete={DeleteOptions.DELETE_ALL}
+                                     onClick={() => this.props.onClick()}
+                                     name='Remove all'/>
                 </div>
             </React.Fragment>
         )
